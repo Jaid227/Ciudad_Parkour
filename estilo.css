@@ -1,4 +1,3 @@
-
 /* ===== BASE ===== */
 
 *{
@@ -50,18 +49,16 @@ body{
   padding: 25px;
 }
 
-/* ===== ENCABEZADO MEJORADO ===== */
+/* ===== ENCABEZADO ===== */
 
 .encabezado h1{
   font-size: 64px;
 
-  /* TEXTO DEGRADADO */
   background: linear-gradient(to right, #fff200, #ff9d00);
   -webkit-background-clip: text;
   color: transparent;
 
   margin: 10px 0;
-
   letter-spacing: 2px;
 
   text-shadow: 0 0 15px rgba(0,0,0,0.4);
@@ -70,20 +67,17 @@ body{
 .encabezado h2{
   color: #ffffff;
   font-size: 42px;
-  letter-spacing: 1px;
 }
 
 .encabezado h4{
   color: #ffe4ff;
   font-size: 24px;
-  margin-top: 5px;
 }
 
 .encabezado h5{
   color: #e8f8ff;
   margin: 8px 0;
   font-size: 19px;
-  line-height: 1.4;
 }
 
 /* ===== TARJETA VIDEO ===== */
@@ -112,7 +106,7 @@ body{
   border: 4px solid #ff416c;
 }
 
-/* ===== INFO HORARIOS ===== */
+/* ===== INFO ===== */
 
 .info{
   margin-top: 25px;
@@ -124,13 +118,11 @@ body{
 
 .info h2{
   color: #00fff2;
-  margin-bottom: 10px;
   font-size: 32px;
 }
 
 .info h3{
   color: #fff6a5;
-  margin-top: 10px;
   font-size: 22px;
 }
 
@@ -142,25 +134,17 @@ body{
   background: rgba(0,0,0,0.35);
   padding: 18px;
   border-radius: 18px;
-
-  text-align: justify;
 }
 
 .historia h2{
   color: #00fff2;
-  margin-bottom: 10px;
   font-size: 30px;
 }
 
 .historia p{
   margin: 10px 0;
-
   color: #f0f8ff;
-
   font-size: 18px;
-  line-height: 1.6;
-
-  text-align: center;
 }
 
 /* ===== LINKS ===== */
@@ -174,14 +158,9 @@ body{
 
 .link:hover{
   color: #00fff2;
-  text-shadow: 0 0 8px #00fff2;
 }
 
 /* ===== CONTACTO ===== */
-
-.contacto{
-  margin-top: 25px;
-}
 
 .btn-wsp{
   display: inline-block;
@@ -191,45 +170,19 @@ body{
   color: white;
 
   padding: 12px 24px;
-
   border-radius: 14px;
 
   text-decoration: none;
-
   font-size: 22px;
-  font-weight: bold;
 
   transition: .3s;
-
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
 .btn-wsp:hover{
   transform: scale(1.1);
-  background: #1ebe5d;
 }
 
-/* ===== PIE ===== */
-
-h4:last-of-type{
-  margin-top: 20px;
-  opacity: .8;
-}
-
-/* ===== ANIMACIÓN ===== */
-
-@keyframes aparece{
-  from{
-    opacity:0;
-    transform: translateY(20px);
-  }
-  to{
-    opacity:1;
-    transform: translateY(0);
-  }
-}
-
-/* ===== RESPONSIVO ===== */
+/* ===== RESPONSIVO – AQUÍ ESTÁ LA SOLUCIÓN ===== */
 
 @media(max-width: 700px){
 
@@ -237,16 +190,16 @@ h4:last-of-type{
     font-size: 40px;
   }
 
-  .encabezado h2{
-    font-size: 30px;
-  }
-
-  .historia p{
-    font-size: 16px;
-  }
-
+  /* 🔴 LOS LOGOS DEJAN DE FLOTAR EN CELULAR */
   .img-izquierda,
   .img-derecha{
-    width: 80px;
+    position: relative;
+    display: block;
+    margin: 10px auto;
+    width: 90px;
+
+    top: 0;
+    left: 0;
+    right: 0;
   }
 }
