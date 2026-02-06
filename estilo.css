@@ -14,7 +14,7 @@ body{
   color: white;
 }
 
-/* ===== IMÁGENES EN ESQUINAS ===== */
+/* ===== IMÁGENES EN ESQUINAS (PC) ===== */
 
 .img-izquierda{
   position: fixed;
@@ -147,19 +147,6 @@ body{
   font-size: 18px;
 }
 
-/* ===== LINKS ===== */
-
-.link{
-  color: #ffe600;
-  text-decoration: none;
-  font-weight: bold;
-  transition: .3s;
-}
-
-.link:hover{
-  color: #00fff2;
-}
-
 /* ===== CONTACTO ===== */
 
 .btn-wsp{
@@ -182,7 +169,7 @@ body{
   transform: scale(1.1);
 }
 
-/* ===== RESPONSIVO – AQUÍ ESTÁ LA SOLUCIÓN ===== */
+/* ===== RESPONSIVO – AQUÍ ESTÁ LO QUE QUERÍAS ===== */
 
 @media(max-width: 700px){
 
@@ -190,16 +177,14 @@ body{
     font-size: 40px;
   }
 
-  /* 🔴 LOS LOGOS DEJAN DE FLOTAR EN CELULAR */
+  /* 🔥 AQUÍ ESTÁ EL CAMBIO CLAVE 🔥 */
+
   .img-izquierda,
   .img-derecha{
-    position: relative;
+    position: static;   /* ← YA NO FIJOS */
     display: block;
-    margin: 10px auto;
+    margin: 10px auto;  /* ← centrados */
     width: 90px;
-
-    top: 0;
-    left: 0;
-    right: 0;
   }
+
 }
