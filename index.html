@@ -36,11 +36,11 @@
 
       <h5>
         Facilitador:
-        <!-- AQUÍ ESTÁ EL CAMBIO -->
-        <span class="link" onclick="abrirCV()">
+        <a class="link" href="imagenes/CV.pdf" target="_blank">
           <i>Jaid Lozano</i>
-        </span>
+        </a>
       </h5>
+
     </header>
 
 
@@ -84,8 +84,7 @@
 
       <p>
         El objetivo no era competir, sino desplazarse con libertad,  
-        control y disciplina. Con el tiempo se difundió por el mundo  
-        gracias a videos, películas y comunidades.
+        control y disciplina.
       </p>
     </section>
 
@@ -93,7 +92,9 @@
     <section class="contacto">
       <h4>WhatsApp Jaid Lozano</h4>
 
-      <a class="link telefono" target="_blank">
+      <a class="link telefono"
+         href="https://wa.me/5591461227"
+         target="_blank">
         💬 55 9146 1227
       </a>
     </section>
@@ -102,28 +103,5 @@
 
   </div>
 
-
-  <!-- ===== VENTANA PARA MOSTRAR CV.png ===== -->
-
-  <div id="modalCV" class="modal">
-    <div class="contenido-modal">
-      <span class="cerrar" onclick="cerrarCV()">×</span>
-
-      <img src="imagenes/CV.png" class="img-cv">
-    </div>
-  </div>
-
-
-  <script>
-    function abrirCV(){
-      document.getElementById("modalCV").style.display = "flex";
-    }
-
-    function cerrarCV(){
-      document.getElementById("modalCV").style.display = "none";
-    }
-  </script>
-
 </body>
-
 </html>
