@@ -64,18 +64,26 @@ body{
   font-size: 18px;
 }
 
-/* ===== LINKS ===== */
+/* ===== LINKS MEJORADOS ===== */
 
 .link{
-  color: #ffe600;
+  color: #c792ff;              /* 🟣 lila brillante */
   text-decoration: none;
   font-weight: bold;
   transition: .3s;
+
+  /* pequeño brillo para que resalten */
+  text-shadow: 0 0 6px rgba(199,146,255,.6);
 }
 
+/* cuando pasas el mouse */
 .link:hover{
-  color: #00fff2;
+  color: #00fff2;              /* 🟢 turquesa */
+  text-shadow: 0 0 10px #00fff2;
+
+  letter-spacing: 1px;
 }
+
 
 
 /* ===== RESPONSIVO – LO QUE QUERÍAS ===== */
