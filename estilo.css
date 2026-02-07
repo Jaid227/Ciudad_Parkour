@@ -14,7 +14,7 @@ body{
   color: white;
 }
 
-/* ===== IMÁGENES EN ESQUINAS ===== */
+/* ===== IMÁGENES ===== */
 
 .img-izquierda{
   position: absolute;
@@ -22,8 +22,6 @@ body{
   left: 15px;
   width: 120px;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.4);
-  transition: .3s;
 }
 
 .img-derecha{
@@ -32,13 +30,6 @@ body{
   right: 15px;
   width: 120px;
   border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.4);
-  transition: .3s;
-}
-
-.img-izquierda:hover,
-.img-derecha:hover{
-  transform: scale(1.1);
 }
 
 /* ===== CONTENEDOR ===== */
@@ -53,10 +44,10 @@ body{
 
 .encabezado h1{
   font-size: 64px;
+
   background: linear-gradient(to right, #fff200, #ff9d00);
   -webkit-background-clip: text;
   color: transparent;
-  margin: 10px 0;
 }
 
 /* ===== TARJETA VIDEO ===== */
@@ -71,13 +62,6 @@ body{
 .video video{
   width: 100%;
   border-radius: 12px;
-  border: 4px solid #ff416c;
-}
-
-/* ===== INFO ===== */
-
-.info{
-  margin-top: 25px;
 }
 
 /* ===== HISTORIA ===== */
@@ -89,28 +73,23 @@ body{
   border-radius: 18px;
 }
 
-/* ================================================= */
-/* 🎯 AQUÍ ESTÁ LO QUE PEDISTE DE COLORES DE NOMBRES */
-/* ================================================= */
+/* ===== LINKS COLORES ===== */
 
 .link{
-  color: #fff200;        /* 🟡 AMARILLO NORMAL */
+  color: #fff200;        /* amarillo */
   text-decoration: none;
   font-weight: bold;
   transition: .3s;
 }
 
-/* 🔵 AL PASAR EL MOUSE */
 .link:hover{
-  color: #8fe3ff;        /* AZUL CLARO */
+  color: #8fe3ff;        /* azul claro */
 }
 
-/* 🟢 AL DAR CLICK */
 .link:active{
-  color: #9fff9f;        /* VERDE CLARO */
+  color: #9fff9f;        /* verde claro */
 }
 
-/* Teléfono con mismo estilo */
 .telefono{
   font-size: 22px;
 }
