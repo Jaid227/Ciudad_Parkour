@@ -1,107 +1,111 @@
-<!DOCTYPE html>
-<html lang="es">
+/* ===== BASE ===== */
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="estilo.css">
-  <title>Parkour Sábados</title>
-</head>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
 
-<body>
+body{
+  background: linear-gradient(135deg, #032d8d, #3f5efb);
+  min-height: 100vh;
+  color: white;
+}
 
-  <!-- IMÁGENES EN ESQUINAS CON ENLACE -->
-  <a href="https://www.fundacioncauceciudadano.org/" target="_blank">
-    <img src="imagenes/fundacion cauce.png" class="img-izquierda">
-  </a>
+/* ===== IMÁGENES EN ESQUINAS ===== */
 
-  <a href="https://www.fundacioncauceciudadano.org/" target="_blank">
-    <img src="imagenes/logotipo_ciudad_retoño.jpg" class="img-derecha">
-  </a>
+.img-izquierda{
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 120px;
+  border-radius: 12px;
+}
 
-  <div class="contenedor">
+.img-derecha{
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 120px;
+  border-radius: 12px;
+}
 
-    <header class="encabezado">
-      <h2>Ciudad Retoño</h2>
+/* ===== CONTENEDOR ===== */
 
-      <h4>te invita a las clases de</h4>
+.contenedor{
+  max-width: 820px;
+  margin: auto;
+  padding: 25px;
+}
 
-      <h1>Parkour Sábados</h1>
+/* ===== ENCABEZADO ===== */
 
-      <h5>Disciplina que fortalece cuerpo y mente</h5>
+.encabezado h1{
+  font-size: 64px;
+  background: linear-gradient(to right, #fff200, #ff9d00);
+  -webkit-background-clip: text;
+  color: transparent;
+}
 
-      <h5>
-        para romper tus miedos y lograr movimientos más ligeros y fluidos
-      </h5>
+/* ===== TARJETA VIDEO ===== */
 
-      <h5>
-        Facilitador:
-        <a class="link" href="imagenes/CV.pdf" target="_blank">
-          <i>Jaid Lozano</i>
-        </a>
-      </h5>
+.tarjeta{
+  background: rgba(255,255,255,.95);
+  padding: 20px;
+  border-radius: 18px;
+  margin-top: 20px;
+}
 
-    </header>
+.video video{
+  width: 100%;
+  border-radius: 12px;
+}
 
+/* ===== HISTORIA ===== */
 
-    <section class="tarjeta">
-      <div class="video">
-        <video controls>
-          <source src="video.mp4" type="video/mp4">
-        </video>
-      </div>
-    </section>
+.historia{
+  margin-top: 25px;
+  background: rgba(0,0,0,0.35);
+  padding: 18px;
+  border-radius: 18px;
+}
 
+/* ===== COLORES DE NOMBRES ===== */
 
-    <section class="info">
-      <h2>Horarios</h2>
+.link{
+  color: #fff200;        /* amarillo */
+  text-decoration: none;
+  font-weight: bold;
+  transition: .3s;
+}
 
-      <h3>Parkids de 10 am a 11:30 am</h3>
+.link:hover{
+  color: #8fe3ff;        /* azul claro */
+}
 
-      <h3>Parkour de 12 pm a 2 pm</h3>
-    </section>
+.link:active{
+  color: #9fff9f;        /* verde claro */
+}
 
+.telefono{
+  font-size: 22px;
+}
 
-    <section class="historia">
-      <h2>Historia del Parkour</h2>
+/* ===== RESPONSIVO ===== */
 
-      <p>
-        El parkour nació en Francia en los años 80 y 90.  
-        Su origen viene del método natural del militar  
-        <a class="link" href="https://methodenaturelle.de/hebert-association-in-english/?utm_source=chatgpt.com" target="_blank">
-          <i>Georges Hébert</i>
-        </a>,  
-        que entrenaba el cuerpo para moverse de forma útil y eficiente.
-      </p>
+@media(max-width: 700px){
 
-      <p>
-        <a class="link" href="https://davidbelleparkour.com/?utm_source=chatgpt.com" target="_blank">
-          <i>David Belle</i>
-        </a>  
-        y Sébastien Foucan tomaron esas ideas y las adaptaron a la ciudad:  
-        correr, saltar, trepar y superar obstáculos usando solo el cuerpo.
-      </p>
+  .encabezado h1{
+    font-size: 40px;
+  }
 
-      <p>
-        El objetivo no era competir, sino desplazarse con libertad,  
-        control y disciplina.
-      </p>
-    </section>
-
-
-    <section class="contacto">
-      <h4>WhatsApp Jaid Lozano</h4>
-
-      <a class="link telefono"
-         href="https://wa.me/5591461227"
-         target="_blank">
-        💬 55 9146 1227
-      </a>
-    </section>
-
-    <h4>2026</h4>
-
-  </div>
-
-</body>
-</html>
+  .img-izquierda,
+  .img-derecha{
+    width: 80px;
+    position: relative;
+    display: inline-block;
+    margin: 5px;
+  }
+}
