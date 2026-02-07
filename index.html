@@ -36,9 +36,10 @@
 
       <h5>
         Facilitador:
-        <a class="link" href="imagenes/CV.jpg" target="_blank">
+        <!-- AQUÍ ESTÁ EL CAMBIO -->
+        <span class="link" onclick="abrirCV()">
           <i>Jaid Lozano</i>
-        </a>
+        </span>
       </h5>
     </header>
 
@@ -90,7 +91,7 @@
 
 
     <section class="contacto">
-      <h4>WhatsApp Jaid Lozano</h4>
+      <h4>WhatsApp</h4>
 
       <a class="link telefono" href="https://web.whatsapp.com//5591461227" target="_blank">
         💬 55 9146 1227
@@ -100,6 +101,28 @@
     <h4>2026</h4>
 
   </div>
+
+
+  <!-- ===== VENTANA PARA MOSTRAR CV.png ===== -->
+
+  <div id="modalCV" class="modal">
+    <div class="contenido-modal">
+      <span class="cerrar" onclick="cerrarCV()">×</span>
+
+      <img src="imagenes/CV.png" class="img-cv">
+    </div>
+  </div>
+
+
+  <script>
+    function abrirCV(){
+      document.getElementById("modalCV").style.display = "flex";
+    }
+
+    function cerrarCV(){
+      document.getElementById("modalCV").style.display = "none";
+    }
+  </script>
 
 </body>
 
