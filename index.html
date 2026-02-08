@@ -2,146 +2,165 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google" content="notranslate">
-  <link rel="stylesheet" href="estilo.css">
-  <title>Parkour los Sábados</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="estilo.css">
+<title>Parkour los Sábados</title>
 </head>
 
 <body>
 
-  <!-- IMÁGENES EN ESQUINAS -->
-  <a href="https://www.fundacioncauceciudadano.org/" target="visor">
-    <img src="imagenes/fundacion cauce.png" class="img-izquierda">
-  </a>
+<!-- LOGOS -->
+<a href="https://www.fundacioncauceciudadano.org/" target="visor">
+  <img src="imagenes/fundacion cauce.png" class="img-izquierda">
+</a>
 
-  <a href="https://www.fundacioncauceciudadano.org/" target="visor">
-    <img src="imagenes/logotipo_ciudad_retoño.jpg" class="img-derecha">
-  </a>
+<a href="https://www.fundacioncauceciudadano.org/" target="visor">
+  <img src="imagenes/logotipo_ciudad_retoño.jpg" class="img-derecha">
+</a>
 
-  <div class="contenedor">
+<!-- ===== MENÚ ===== -->
+<nav class="menu">
+  <button onclick="mostrar('inicio')">Inicio</button>
+  <button onclick="mostrar('horarios')">Horarios</button>
+  <button onclick="mostrar('galeria')">Galería</button>
+  <button onclick="mostrar('historia')">Historia</button>
+  <button onclick="mostrar('contacto')">Contacto</button>
+</nav>
 
-    <header class="encabezado">
+<div class="contenedor">
 
-      <h2>Ciudad Retoño</h2>
-      <h4>te invita a las clases de</h4>
+<!-- ===== INICIO ===== -->
+<section id="inicio" class="seccion activa">
 
-      <h1>Parkour Sábados</h1>
+<header class="encabezado">
 
-      <h5>Disciplina que fortalece cuerpo y mente</h5>
+<h2>Ciudad Retoño</h2>
+<h4>te invita a las clases de</h4>
 
-      <h5>para romper tus miedos y lograr movimientos más ligeros y fluidos</h5>
+<h1>Parkour Sábados</h1>
 
-      <h5>
-        Facilitador:
-        <!-- 👉 AQUÍ ESTÁ EL PDF -->
-          <a class="link" href="imagenes/CV.png" target="visor">
-            <i>Jaid Lozano</i>
-          </a>
+<h5>Disciplina que fortalece cuerpo y mente</h5>
 
-      </h5>
+<h5>para romper tus miedos y lograr movimientos más ligeros y fluidos</h5>
 
-    </header>
+<h5>
+Facilitador:
+<a class="link" href="imagenes/CV.png" target="visor">
+<i>Jaid Lozano</i>
+</a>
+</h5>
 
+</header>
 
-<section class="tarjeta"> 
-  <div class="video"> 
-    <video controls> <source src="video.mp4" type="video/mp4"> </video> 
-  </div> 
+<section class="tarjeta">
+<div class="video">
+<video controls>
+<source src="video.mp4" type="video/mp4">
+</video>
+</div>
 </section>
-
-
-    <section class="info">
-      <h2>Horarios</h2>
-
-      <h3>Parkour kids de 10 am a 11:30 am</h3>
-
-      <h3>Parkour de 12 pm a 2 pm</h3>
-      
-    </section>
-
-<img src="imagenes/imagen1.jpg">
-
-<!-- ===== CARRUSEL DE IMÁGENES ===== -->
-
-<!-- ===== CARRUSEL DE IMÁGENES ===== -->
-
-<section class="carrusel">
-
-  <div class="carrusel-track">
-
-    <img src="imagenes/parkour1.jpg">
-    <img src="imagenes/parkour2.jpg">
-    <img src="imagenes/parkour3.jpg">
-    <img src="imagenes/parkour4.jpg">
-    <img src="imagenes/parkour5.jpg">
-    <img src="imagenes/parkour6.jpg">
-    <img src="imagenes/parkour7.jpg">
-    <img src="imagenes/parkour8.jpg">
-    <img src="imagenes/parkour9.jpg">
-    <img src="imagenes/parkour10.jpg">
-
-    <!-- 👇 REPETIMOS PARA QUE SEA INFINITO -->
-    <img src="imagenes/parkour1.jpg">
-    <img src="imagenes/parkour2.jpg">
-    <img src="imagenes/parkour3.jpg">
-    <img src="imagenes/parkour4.jpg">
-    <img src="imagenes/parkour5.jpg">
-    <img src="imagenes/parkour6.jpg">
-    <img src="imagenes/parkour7.jpg">
-    <img src="imagenes/parkour8.jpg">
-    <img src="imagenes/parkour9.jpg">
-    <img src="imagenes/parkour10.jpg">
-
-  </div>
 
 </section>
 
+<!-- ===== HORARIOS ===== -->
+<section id="horarios" class="seccion">
 
+<h2>Horarios</h2>
 
+<h3>Parkour kids de 10 am a 11:30 am</h3>
+<h3>Parkour de 12 pm a 2 pm</h3>
 
+</section>
 
+<!-- ===== GALERÍA ===== -->
+<section id="galeria" class="seccion">
 
-    <section class="historia">
+<h2>Galería</h2>
 
-      <h2>Historia del Parkour</h2>
+<div class="carrusel">
+<div class="carrusel-track">
 
-      <p>
-        El parkour nació en Francia en los años 80 y 90.
-        Su origen viene del método natural del militar  
-        <a class="link" href="https://methodenaturelle.de/hebert-association-in-english/" target="visor">
-          <i>Georges Hébert</i>
-        </a>
-        que entrenaba el cuerpo para moverse de forma útil y eficiente.
-      </p>
+<img src="imagenes/parkour1.jpg">
+<img src="imagenes/parkour2.jpg">
+<img src="imagenes/parkour3.jpg">
+<img src="imagenes/parkour4.jpg">
+<img src="imagenes/parkour5.jpg">
+<img src="imagenes/parkour6.jpg">
+<img src="imagenes/parkour7.jpg">
+<img src="imagenes/parkour8.jpg">
+<img src="imagenes/parkour9.jpg">
+<img src="imagenes/parkour10.jpg">
 
-      <p>
-        <a class="link" href="https://davidbelleparkour.com/" target="visor">
-          <i>David Belle</i>
-        </a>
-        y Sébastien Foucan tomaron esas ideas y las adaptaron a la ciudad:  
-        correr, saltar, trepar y superar obstáculos usando solo el cuerpo.
-      </p>
-      <p>
-        El objetivo no era competir, sino desplazarse con libertad,  
-        control y disciplina.
-      </p>
+<img src="imagenes/parkour1.jpg">
+<img src="imagenes/parkour2.jpg">
+<img src="imagenes/parkour3.jpg">
+<img src="imagenes/parkour4.jpg">
+<img src="imagenes/parkour5.jpg">
 
-    </section>
+</div>
+</div>
 
+</section>
 
-    <section class="contacto">
-      <h4>WhatsApp Jaid Lozano</h4>
+<!-- ===== HISTORIA ===== -->
+<section id="historia" class="seccion historia">
 
-      <a class="link telefono" target="visor">
-        💬 55 9146 1227
-      </a>
-    </section>
+<h2>Historia del Parkour</h2>
 
-    <h4>2026</h4>
+<p>
+El parkour nació en Francia en los años 80 y 90.
+Su origen viene del método natural del militar  
+<a class="link" href="https://methodenaturelle.de/hebert-association-in-english/" target="visor">
+<i>Georges Hébert</i>
+</a>
+que entrenaba el cuerpo para moverse de forma útil y eficiente.
+</p>
 
-  </div>
+<p>
+<a class="link" href="https://davidbelleparkour.com/" target="visor">
+<i>David Belle</i>
+</a>
+y Sébastien Foucan tomaron esas ideas y las adaptaron a la ciudad:  
+correr, saltar, trepar y superar obstáculos usando solo el cuerpo.
+</p>
+
+<p>
+El objetivo no era competir, sino desplazarse con libertad,  
+control y disciplina.
+</p>
+
+</section>
+
+<!-- ===== CONTACTO ===== -->
+<section id="contacto" class="seccion">
+
+<h2>Contacto</h2>
+
+<h4>WhatsApp Jaid Lozano</h4>
+
+<a class="link telefono" target="visor">
+💬 55 9146 1227
+</a>
+
+</section>
+
+<h4>2026</h4>
+
+</div>
+
+<script>
+function mostrar(id){
+
+let secciones = document.querySelectorAll('.seccion');
+
+secciones.forEach(sec => {
+sec.classList.remove('activa');
+});
+
+document.getElementById(id).classList.add('activa');
+}
+</script>
 
 </body>
 </html>
