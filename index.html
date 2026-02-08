@@ -44,30 +44,11 @@
     </header>
 
 
-<section class="tarjeta">
-  <div class="video">
-    <video
-      id="videoGif"
-      loop
-      muted
-      playsinline
-      poster="imagenes/portada.png">
-
-      <source src="video.mp4" type="video/mp4">
-    </video>
-
-    <button class="btn" onclick="iniciar()">
-      ▶ Comenzar
-    </button>
-  </div>
+<section class="tarjeta"> 
+  <div class="video"> 
+    <video controls> <source src="video.mp4" type="video/mp4"> </video> 
+  </div> 
 </section>
-
-<script>
-function iniciar(){
-  let v = document.getElementById("videoGif");
-  v.play();
-}
-</script>
 
 
     <section class="info">
