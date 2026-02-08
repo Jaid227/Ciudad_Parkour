@@ -111,3 +111,64 @@ body{
   }
 }
 
+/* ===== CARRUSEL INFINITO ===== */
+
+.carrusel{
+  width: 100%;
+  overflow: hidden;
+  margin-top: 25px;
+  background: rgba(0,0,0,0.3);
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.carrusel-track{
+  display: flex;
+  gap: 10px;
+
+  animation: scroll 25s linear infinite;
+}
+
+.carrusel-track img{
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+
+  border-radius: 12px;
+  border: 3px solid #fff200;
+
+  transition: .3s;
+}
+
+/* Pausar con el mouse */
+.carrusel-track:hover{
+  animation-play-state: paused;
+}
+
+/* Efecto al pasar el mouse */
+.carrusel-track img:hover{
+  transform: scale(1.1);
+  border-color: #8fe3ff;
+}
+
+/* ANIMACIÓN */
+@keyframes scroll{
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-50%);
+  }
+}
+
+/* RESPONSIVO */
+@media(max-width: 700px){
+
+  .carrusel-track img{
+    width: 120px;
+    height: 90px;
+  }
+
+}
+
+
