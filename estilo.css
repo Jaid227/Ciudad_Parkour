@@ -1,176 +1,186 @@
 /* ===== BASE ===== */
 
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: Arial;
+text-align: center;
 }
 
 body{
-  background: linear-gradient(135deg, #032d8d, #3f5efb);
-  min-height: 100vh;
-  color: white;
+background: linear-gradient(135deg, #032d8d, #3f5efb);
+min-height: 100vh;
+color: white;
 }
 
-/* ===== IMÁGENES ===== */
+/* ===== LOGOS ===== */
 
 .img-izquierda{
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  width: 120px;
-  border-radius: 12px;
+position: absolute;
+top: 10px;
+left: 10px;
+width: 100px;
 }
 
 .img-derecha{
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 120px;
-  border-radius: 12px;
+position: absolute;
+top: 10px;
+right: 10px;
+width: 100px;
+}
+
+/* ===== MENÚ ===== */
+
+.menu{
+margin-top: 120px;
+display: flex;
+justify-content: center;
+gap: 10px;
+flex-wrap: wrap;
+}
+
+.menu button{
+background: #fff200;
+border: none;
+padding: 10px 15px;
+border-radius: 10px;
+cursor: pointer;
+font-weight: bold;
+transition: .3s;
+}
+
+.menu button:hover{
+background: #8fe3ff;
+}
+
+/* ===== SECCIONES ===== */
+
+.seccion{
+display: none;
+
+animation: aparece .5s;
+}
+
+.activa{
+display: block;
 }
 
 /* ===== CONTENEDOR ===== */
 
 .contenedor{
-  max-width: 820px;
-  margin: auto;
-  padding: 25px;
+max-width: 900px;
+margin: auto;
+padding: 20px;
 }
 
-/* ===== ENCABEZADO ===== */
+/* ===== TÍTULO ===== */
 
 .encabezado h1{
-  font-size: 64px;
+font-size: 60px;
 
-  background: linear-gradient(to right, #fff200, #ff9d00);
-  -webkit-background-clip: text;
-  color: transparent;
+background: linear-gradient(to right, #fff200, #ff9d00);
+-webkit-background-clip: text;
+color: transparent;
 }
 
-/* ===== TARJETA VIDEO ===== */
+/* ===== VIDEO ===== */
 
 .tarjeta{
-  background: rgba(255,255,255,.95);
-  padding: 20px;
-  border-radius: 18px;
-  margin-top: 20px;
+background: white;
+padding: 15px;
+border-radius: 15px;
+margin-top: 15px;
 }
 
 .video video{
-  width: 100%;
-  border-radius: 12px;
+width: 100%;
+border-radius: 10px;
+}
+
+/* ===== LINKS ===== */
+
+.link{
+color: #fff200;
+text-decoration: none;
+font-weight: bold;
+}
+
+.link:hover{
+color: #8fe3ff;
+}
+
+.link:active{
+color: #9fff9f;
+}
+
+/* ===== CARRUSEL ===== */
+
+.carrusel{
+overflow: hidden;
+margin-top: 20px;
+}
+
+.carrusel-track{
+display: flex;
+gap: 10px;
+
+animation: scroll 25s linear infinite;
+}
+
+.carrusel-track img{
+width: 180px;
+height: 120px;
+object-fit: cover;
+
+border-radius: 10px;
+border: 3px solid yellow;
+}
+
+.carrusel-track:hover{
+animation-play-state: paused;
 }
 
 /* ===== HISTORIA ===== */
 
 .historia{
-  margin-top: 25px;
-  background: rgba(0,0,0,0.35);
-  padding: 18px;
-  border-radius: 18px;
+background: rgba(0,0,0,.3);
+padding: 15px;
+border-radius: 15px;
+margin-top: 15px;
 }
 
-/* ===== LINKS COLORES ===== */
+/* ===== ANIMACIONES ===== */
 
-.link{
-  color: #fff200;        /* amarillo */
-  text-decoration: none;
-  font-weight: bold;
-  transition: .3s;
+@keyframes aparece{
+from{
+opacity:0;
+transform: translateY(20px);
 }
 
-.link:hover{
-  color: #8fe3ff;        /* azul claro */
+to{
+opacity:1;
+transform: translateY(0);
+}
 }
 
-.link:active{
-  color: #9fff9f;        /* verde claro */
-}
-
-.telefono{
-  font-size: 22px;
+@keyframes scroll{
+from{transform: translateX(0);}
+to{transform: translateX(-50%);}
 }
 
 /* ===== RESPONSIVO ===== */
 
 @media(max-width: 700px){
 
-  .encabezado h1{
-    font-size: 40px;
-  }
-
-  .img-izquierda,
-  .img-derecha{
-    width: 80px;
-    position: relative;
-    display: inline-block;
-    margin: 5px;
-  }
+.encabezado h1{
+font-size: 38px;
 }
 
-/* ===== CARRUSEL INFINITO ===== */
-
-
-.carrusel{
-  width: 100%;
-  overflow: hidden;
-  margin-top: 25px;
-  background: rgba(0,0,0,0.3);
-  padding: 10px;
-  border-radius: 15px;
+.img-izquierda,
+.img-derecha{
+position: relative;
+width: 70px;
 }
 
-.carrusel-track{
-  display: flex;
-  gap: 10px;
-
-  animation: scroll 25s linear infinite;
 }
-
-.carrusel-track img{
-  width: 180px;
-  height: 120px;
-  object-fit: cover;
-
-  border-radius: 12px;
-  border: 3px solid #fff200;
-
-  transition: .3s;
-}
-
-/* Pausar con el mouse */
-.carrusel-track:hover{
-  animation-play-state: paused;
-}
-
-/* Efecto al pasar el mouse */
-.carrusel-track img:hover{
-  transform: scale(3.1);
-  border-color: #8fe3ff;
-}
-
-/* ANIMACIÓN */
-@keyframes scroll{
-  from{
-    transform: translateX(0);
-  }
-  to{
-    transform: translateX(-50%);
-  }
-}
-
-/* RESPONSIVO */
-@media(max-width: 700px){
-
-  .carrusel-track img{
-    width: 120px;
-    height: 90px;
-  }
-
-}
-
-
-
