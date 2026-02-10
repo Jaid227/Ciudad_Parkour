@@ -8,6 +8,30 @@
 <title>Parkour los Sábados</title>
 </head>
 
+  <script>
+// Seleccionar TODAS las imágenes del carrusel y la rejilla
+const imagenes = document.querySelectorAll(
+  '.carrusel-track img, .galeria-grid img'
+);
+
+const visor = document.getElementById('visor');
+const imagenGrande = document.getElementById('imagenGrande');
+
+// Abrir imagen
+imagenes.forEach(img => {
+  img.addEventListener('click', () => {
+    visor.style.display = "flex";
+    imagenGrande.src = img.src;
+  });
+});
+
+// Cerrar con click
+visor.addEventListener('click', () => {
+  visor.style.display = "none";
+});
+</script>
+
+
 <body>
 
 <!-- LOGOS -->
