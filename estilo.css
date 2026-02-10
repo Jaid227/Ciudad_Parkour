@@ -114,7 +114,6 @@ color: #8fe3ff;
 color: #9fff9f;
 }
 
-/* ===== CARRUSEL ===== */
 
 /* ===== CARRUSEL ===== */
 
@@ -136,7 +135,7 @@ color: #9fff9f;
     transform: translateX(0);
   }
   to{
-    transform: translateX(-50%);
+    transform: translateX(-10%);
   }
 }
 
