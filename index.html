@@ -1,226 +1,127 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="estilo.css">
-<title>Parkour los Sábados</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👟 Parkour Ciudad Retoño</title>
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
 </head>
-
-  <script>
-// Seleccionar TODAS las imágenes del carrusel y la rejilla
-const imagenes = document.querySelectorAll(
-  '.carrusel-track img, .galeria-grid img'
-);
-
-const visor = document.getElementById('visor');
-const imagenGrande = document.getElementById('imagenGrande');
-
-// Abrir imagen
-imagenes.forEach(img => {
-  img.addEventListener('click', () => {
-    visor.style.display = "flex";
-    imagenGrande.src = img.src;
-  });
-});
-
-// Cerrar con click
-visor.addEventListener('click', () => {
-  visor.style.display = "none";
-});
-</script>
-
-
 <body>
 
-<!-- LOGOS -->
-<a href="https://www.fundacioncauceciudadano.org/" target="visor">
-  <img src="imagenes/fundacion cauce.png" class="img-izquierda">
-</a>
-
-<a href="https://www.fundacioncauceciudadano.org/" target="visor">
-  <img src="imagenes/logotipo_ciudad_retoño.jpg" class="img-derecha">
-</a>
-
-<!-- ===== MENÚ ===== -->
-<nav class="menu">
-  <button onclick="mostrar('inicio')">Inicio</button>
-  <button onclick="mostrar('horarios')">Horarios</button>
-  <button onclick="mostrar('galeria')">Galería</button>
-  <button onclick="mostrar('historia')">Historia</button>
-  <button onclick="mostrar('contacto')">Contacto</button>
-</nav>
-
-<div class="contenedor">
-
-<!-- ===== INICIO ===== -->
-<section id="inicio" class="seccion activa">
-
-<header class="encabezado">
-
-<h2>Ciudad Retoño</h2>
-<h4>te invita a las clases de</h4>
-
-<h1>Parkour Sábados</h1>
-
-<h5>Disciplina que fortalece cuerpo y mente</h5>
-
-<h5>para romper tus miedos y lograr movimientos más ligeros y fluidos</h5>
-
-<h5>
-Facilitador:
-<a class="link" href="imagenes/CV.png" target="visor">
-<i>Jaid Lozano</i>
-</a>
-</h5>
-
+<header class="hero">
+    <h1>Ciudad Retoño</h1>
+    <h2>⭐ Clases de Parkour · Sábados </h2>
+    <p class="frase">
+        “Disciplina que fortalece cuerpo y mente para romper tus miedos<br>
+        y lograr movimientos más ligeros y fluidos”
+    </p>
+    <p class="facilitador">
+        Facilitador:
+        <span id="jaidBtn">Jaid Lozano ⚡</span>
+    </p>
 </header>
 
-<section class="tarjeta">
-<div class="video">
-<video controls>
-<source src="video.mp4" type="video/mp4">
-</video>
-</div>
+<section class="video">
+    <h2>💪 Entrenamiento </h2>
+    <div class="video-container">
+        <video controls>
+            <source src="videos/video.mp4" type="video/mp4">
+            Tu navegador no soporta video.
+        </video>
+    </div>
 </section>
 
-</section>
-
-<!-- ===== HORARIOS ===== -->
-<section id="horarios" class="seccion">
-
-<h2>Horarios</h2>
-
-<h3>Parkour kids de 10 am a 11:30 am</h3>
-<h3>Parkour de 12 pm a 2 pm</h3>
-
-</section>
-
-<!-- ===== GALERÍA ===== -->
-<section id="galeria" class="seccion">
-
-<h2>Galería</h2>
-
-<!-- CARRUSEL -->
-<div class="carrusel">
-  <div class="carrusel-track">
-
-    <img src="imagenes/parkour1.jpg">
-    <img src="imagenes/parkour2.jpg">
-    <img src="imagenes/parkour3.jpg">
-    <img src="imagenes/parkour4.jpg">
-    <img src="imagenes/parkour5.jpg">
-    <img src="imagenes/parkour6.jpg">
-    <img src="imagenes/parkour7.jpg">
-    <img src="imagenes/parkour8.jpg">
-    <img src="imagenes/parkour9.jpg">
-    <img src="imagenes/parkour10.jpg">
-
-    <!-- duplicadas para scroll infinito sin salto -->
-    <img src="imagenes/parkour1.jpg">
-    <img src="imagenes/parkour2.jpg">
-    <img src="imagenes/parkour3.jpg">
-    <img src="imagenes/parkour4.jpg">
-    <img src="imagenes/parkour5.jpg">
-    <img src="imagenes/parkour6.jpg">
-    <img src="imagenes/parkour7.jpg">
-    <img src="imagenes/parkour8.jpg">
-    <img src="imagenes/parkour9.jpg">
-    <img src="imagenes/parkour10.jpg">
-
-  </div>
-</div>
-
-
-<!-- REJILLA DE IMÁGENES -->
-<h3>Explorar imágenes</h3>
-
-<div class="galeria-grid">
-
-  <img src="imagenes/parkour1.jpg">
-  <img src="imagenes/parkour2.jpg">
-  <img src="imagenes/parkour3.jpg">
-  <img src="imagenes/parkour4.jpg">
-  <img src="imagenes/parkour5.jpg">
-  <img src="imagenes/parkour6.jpg">
-  <img src="imagenes/parkour7.jpg">
-  <img src="imagenes/parkour8.jpg">
-  <img src="imagenes/parkour9.jpg">
-  <img src="imagenes/parkour10.jpg">
-
-</div>
-
+<section class="horarios">
+    <h2>⏰ Horarios ⏰</h2>
+    <div class="horario-box">
+        <div class="hora kids">
+            <h3>🏃🏻‍➡️ Parkids</h3>
+            <p>10 am · 11:30 am</p>
+        </div>
+        <div class="hora adultos">
+            <h3>🏃🏻‍➡️ Parkour</h3>
+            <p>12 pm · 2 pm</p>
+        </div>
+    </div>
 </section>
 
 
-<!-- VISOR PANTALLA COMPLETA -->
-<div id="visor">
-  <img id="imagenGrande">
-</div>
 
-
-<!-- ===== HISTORIA ===== -->
-<section id="historia" class="seccion historia">
-
-<h2>Historia del Parkour</h2>
-
-<p>
-El parkour nació en Francia en los años 80 y 90.
-Su origen viene del método natural del militar  
-<a class="link" href="https://methodenaturelle.de/hebert-association-in-english/" target="visor">
-<i>Georges Hébert</i>
-</a>
-que entrenaba el cuerpo para moverse de forma útil y eficiente.
-</p>
-
-<p>
-<a class="link" href="https://davidbelleparkour.com/" target="visor">
-<i>David Belle</i>
-</a>
-y Sébastien Foucan tomaron esas ideas y las adaptaron a la ciudad:  
-correr, saltar, trepar y superar obstáculos usando solo el cuerpo.
-</p>
-
-<p>
-El objetivo no era competir, sino desplazarse con libertad,  
-control y disciplina.
-</p>
-
+<!-- NUEVO CARRUSEL DE IMÁGENES -->
+<section class="carrusel-section">
+    <h2>📸 Galería Parkour 📸</h2>
+    <div class="carrusel-container">
+        <div class="carrusel-slides">
+            <img src="imagenes/parkour1.jpg" alt="Parkour 1" class="carrusel-img active">
+            <img src="imagenes/parkour2.jpg" alt="Parkour 2" class="carrusel-img">
+            <img src="imagenes/parkour3.jpg" alt="Parkour 3" class="carrusel-img">
+            <img src="imagenes/parkour4.jpg" alt="Parkour 4" class="carrusel-img">
+            <img src="imagenes/parkour5.jpg" alt="Parkour 5" class="carrusel-img">
+            <img src="imagenes/parkour6.jpg" alt="Parkour 6" class="carrusel-img">
+            <img src="imagenes/parkour7.jpg" alt="Parkour 7" class="carrusel-img">
+            <img src="imagenes/parkour8.jpg" alt="Parkour 8" class="carrusel-img">
+            <img src="imagenes/parkour9.jpg" alt="Parkour 9" class="carrusel-img">
+            <img src="imagenes/parkour10.jpg" alt="Parkour 10" class="carrusel-img">
+        </div>
+        
+        <!-- Botones de navegación -->
+        <button class="carrusel-btn prev">❮</button>
+        <button class="carrusel-btn next">❯</button>
+        
+        <!-- Indicadores (puntos) -->
+        <div class="carrusel-indicadores">
+            <span class="indicador active" data-index="0"></span>
+            <span class="indicador" data-index="1"></span>
+            <span class="indicador" data-index="2"></span>
+            <span class="indicador" data-index="3"></span>
+            <span class="indicador" data-index="4"></span>
+            <span class="indicador" data-index="5"></span>
+            <span class="indicador" data-index="6"></span>
+            <span class="indicador" data-index="7"></span>
+            <span class="indicador" data-index="8"></span>
+            <span class="indicador" data-index="9"></span>
+        </div>
+    </div>
 </section>
 
-<!-- ===== CONTACTO ===== -->
-<section id="contacto" class="seccion">
 
-<h2>Contacto</h2>
 
-<h4>WhatsApp Jaid Lozano</h4>
 
-<a class="link telefono" target="visor">
-💬 55 9146 1227
-</a>
-
-  <h3>se parte de esta comudidad</h3>  
-  <h4>te esperamos</h4>  
-
+<section class="historia">
+    <h2>Historia del Parkour</h2>
+    <p>
+        🛡️ El parkour nació en Francia en los años 80 y 90. Su origen viene del método natural del militar
+        <a href="https://methodenaturelle.de/hebert-association-in-english/?utm_source=chatgpt.com" target="_blank">
+            Georges Hébert
+        </a>,
+        que entrenaba el cuerpo para moverse de forma útil y eficiente.
+    </p>
+    <p>
+        🔥 <a href="https://davidbelleparkour.com/?utm_source=chatgpt.com" target="_blank">David Belle</a>
+        y Sébastien Foucan tomaron esas ideas y las adaptaron a la ciudad: correr, saltar, trepar y superar obstáculos usando solo el cuerpo.
+    </p>
+    <p>
+        🧠 El objetivo no era competir, sino desplazarse con libertad, control y disciplina. Con el tiempo se difundió por el mundo gracias a videos, películas y comunidades.
+    </p>
 </section>
 
-<h4>2026</h4>
+<section class="contacto">
+    <h2 style="font-size: 2.6rem; color: #e7f5cf;">📞 Conéctate 📞</h2>
+    <a class="whatsapp-btn" href="https://wa.me/525591461227" target="_blank">
+        💬 WhatsApp 55 9146 1227
+    </a>
+    <p class="anio">🧩 2026 · Ciudad Retoño · 🌻</p>
+</section>
 
+<!-- MODAL IMAGEN -->
+<div id="modalJaid" class="modal">
+    <img src="imagenes/CV.png" alt="Jaid Lozano">
 </div>
 
-<script>
-function mostrar(id){
-
-let secciones = document.querySelectorAll('.seccion');
-
-secciones.forEach(sec => {
-sec.classList.remove('activa');
-});
-
-document.getElementById(id).classList.add('activa');
-}
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
